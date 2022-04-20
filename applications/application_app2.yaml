@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: nginx-two-argo
-  namespace: argocd
+  namespace: argocd-lwiecek-test
 spec:
   project: default
   source:
