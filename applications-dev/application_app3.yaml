@@ -1,14 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-one-argo
+  name: nginx-three-argo
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: 'https://github.com/Crystalzord/argocd-poc.git'
     targetRevision: HEAD
-    path: app1
+    path: app3
+    helm:
+      valueFiles:
+      - values_dev.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
